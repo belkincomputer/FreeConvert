@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Untitled</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Video Converter</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Add your CSS file link -->
+</head>
+<body>
+    <div class="container">
+        <h1>Online Video Converter</h1>
+        <p>Select your video file and choose the format you want to convert to.</p>
+
+        <form id="uploadForm" enctype="multipart/form-data">
+            <label for="sourceSelect">Upload from:</label>
+            <select id="sourceSelect" onchange="toggleInputFields()" required>
+                <option value="local">Local File</option>
+                <option value="dropbox">Dropbox</option>
+                <option value="gdrive">Google Drive</option>
+                <option value="onedrive">OneDrive</option>
+                <option value="url">URL</option>
+            </select>
+
+            <input type="file" id="videoInput" accept="video/mp4, video/mov, video/mkv" required>
+            <input type="text" id="urlInput" placeholder="Enter video URL" class="hidden">
+            <input type="text" id="dropboxInput" placeholder="Enter Dropbox link" class="hidden">
+            <input type="text" id="gdriveInput" placeholder="Enter Google Drive link" class="hidden">
+            <input type="text" id="onedriveInput" placeholder="Enter OneDrive link" class="hidden">
+
+            <label for="formatSelect">Choose output format:</label>
+            <select id="formatSelect" required>
+                <option value="mp4">MP4</option>
+                <option value="mov">MOV</option>
+                <option value="mkv">MKV</option>
+            </select>
+
+            <button type="submit">Convert Video</button>
+        </form>
+
+        <div id="result" class="hidden">
+            <h2>Conversion Result</h2>
+            <p>Your converted video is ready! Download it <a id="downloadLink" href="#" download>here</a>.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script> <!-- Add your JavaScript file link -->
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
